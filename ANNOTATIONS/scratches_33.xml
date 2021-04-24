@@ -1,0 +1,37 @@
+<annotation>
+	<folder>sc</folder>
+	<filename>scratches_33.jpg</filename>
+	<source>
+  		 <database>NEU-DET</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>scratches</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>107</xmin>
+			<ymin>30</ymin>
+			<xmax>124</xmax>
+			<ymax>150</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>inclusion</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>38</xmin>
+			<ymin>47</ymin>
+			<xmax>52</xmax>
+			<ymax>80</ymax>
+		</bndbox>
+	</object>
+</annotation>

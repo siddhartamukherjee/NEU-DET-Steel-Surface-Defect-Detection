@@ -1,0 +1,37 @@
+<annotation>
+	<folder>rs</folder>
+	<filename>rolled-in_scale_136.jpg</filename>
+	<source>
+  		 <database>NEU-DET</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>rolled-in_scale</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>57</xmin>
+			<ymin>70</ymin>
+			<xmax>138</xmax>
+			<ymax>122</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>rolled-in_scale</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>119</xmin>
+			<ymin>153</ymin>
+			<xmax>179</xmax>
+			<ymax>194</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,37 @@
+<annotation>
+	<folder>pa</folder>
+	<filename>patches_97.jpg</filename>
+	<source>
+		<database>NEU-DET</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>patches</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>75</xmin>
+			<ymin>51</ymin>
+			<xmax>133</xmax>
+			<ymax>145</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>patches</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>90</xmin>
+			<ymin>146</ymin>
+			<xmax>130</xmax>
+			<ymax>193</ymax>
+		</bndbox>
+	</object>
+</annotation>

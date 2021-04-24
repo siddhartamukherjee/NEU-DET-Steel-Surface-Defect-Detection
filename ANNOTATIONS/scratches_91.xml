@@ -1,0 +1,25 @@
+<annotation>
+	<folder>sc</folder>
+	<filename>scratches_91.jpg</filename>
+	<source>
+  		 <database>NEU-DET</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>scratches</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>84</xmin>
+			<ymin>19</ymin>
+			<xmax>107</xmax>
+			<ymax>199</ymax>
+		</bndbox>
+	</object>
+</annotation>

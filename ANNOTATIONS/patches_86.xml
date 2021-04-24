@@ -1,0 +1,25 @@
+<annotation>
+	<folder>pa</folder>
+	<filename>patches_86.jpg</filename>
+	<source>
+		<database>NEU-DET</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>patches</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>40</xmin>
+			<ymin>37</ymin>
+			<xmax>145</xmax>
+			<ymax>150</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,25 @@
+<annotation>
+  <folder>ps</folder>
+  <filename>pitted_surface_77</filename>
+  <source>
+		<database>NEU-DET</database>
+  </source>
+  <size>
+    <width>200</width>
+    <height>200</height>
+    <depth>1</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>pitted_surface</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>1</xmin>
+      <ymin>1</ymin>
+      <xmax>199</xmax>
+      <ymax>200</ymax>
+    </bndbox>
+  </object>
+</annotation>

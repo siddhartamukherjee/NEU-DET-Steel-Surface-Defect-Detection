@@ -1,0 +1,25 @@
+<annotation>
+	<folder>cr</folder>
+	<filename>crazing_202.jpg</filename>
+	<source>
+		<database>NEU-DET</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>crazing</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>21</xmin>
+			<ymin>6</ymin>
+			<xmax>174</xmax>
+			<ymax>105</ymax>
+		</bndbox>
+	</object>
+</annotation>

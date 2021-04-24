@@ -1,0 +1,25 @@
+<annotation>
+	<folder>rs</folder>
+	<filename>rolled-in_scale_34.jpg</filename>
+	<source>
+  		 <database>NEU-DET</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>rolled-in_scale</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>43</xmin>
+			<ymin>18</ymin>
+			<xmax>91</xmax>
+			<ymax>70</ymax>
+		</bndbox>
+	</object>
+</annotation>

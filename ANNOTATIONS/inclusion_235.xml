@@ -1,0 +1,25 @@
+<annotation>
+	<folder>in</folder>
+	<filename>inclusion_235.jpg</filename>
+	<source>
+		<database>NEU-DET</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>inclusion</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>77</xmin>
+			<ymin>94</ymin>
+			<xmax>130</xmax>
+			<ymax>179</ymax>
+		</bndbox>
+	</object>
+</annotation>
