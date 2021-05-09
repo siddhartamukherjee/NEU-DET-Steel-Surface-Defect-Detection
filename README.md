@@ -1,7 +1,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Setup](#setup)
+* [Setup](#Setup)
 
 
 
@@ -28,3 +28,11 @@ The technologies used in this project are given below:-
 
 * Python(v3.7.3)
 * Pytorch(v1.1.0)
+
+## Setup
+
+This section gives an overview of how to use the project.
+
+* First to get an overview about the data have a look at the ipynb file named Exploratory_Data_Analysis.ipynb.
+* The model training has been done by the script Train_Segmentation_Model.ipynb.
+* Once, the model has been trained the script named Inference_Script_Real_Time.ipynb can be used to get inference on an image.
