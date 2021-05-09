@@ -55,7 +55,7 @@ Below is the description of the important files and folders in the project:-
 
 This section gives an overview of how to use the project.
 
-* Install the requirements from the Requirements.txt file using the command **pip install -r requirements.txt**.
+* Install the requirements from the requirements.txt file using the command **pip install -r requirements.txt**.
 * First to get an overview about the data have a look at the ipynb file named Exploratory_Data_Analysis.ipynb.
 * The model training has been done by the script Train_Segmentation_Model.ipynb.
 * Once, the model has been trained the script named Inference_Script_Real_Time.ipynb can be used to get inference on an image.
