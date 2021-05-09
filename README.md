@@ -23,3 +23,8 @@ Before we started with the project we ran the script named Create _Validation_Im
 The details of the key files and folders are given below.
 
 ## Technologies
+
+The technologies used in this project are given below:-
+
+* Python(v3.7.3)
+* Pytorch(v1.1.0)
