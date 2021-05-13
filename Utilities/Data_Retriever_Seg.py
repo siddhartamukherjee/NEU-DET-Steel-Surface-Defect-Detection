@@ -46,8 +46,8 @@ class DataRetriever(torch_data.Dataset):
     
     def make_mask(self,row_id):
         name = self.df.iloc[row_id].Name
-        annot = "\\".join([self.annot_folder, name])
-        fname = "\\".join([self.image_folder, (name[:-4]+'.jpg')])
+        annot = "\\".join([self.annot_folder, name+'.xml'])
+        fname = "\\".join([self.image_folder, (name+'.jpg')])
         labels = self.df.iloc[row_id][1:7].to_dict()
         
         tree = ET.parse(annot)

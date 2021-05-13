@@ -6,8 +6,6 @@
 
 import pandas as pd
 import numpy as np
-from Utilities.Data_Retriever_Seg import DataRetriever
-from Utilities.Meter import Meter
 import torch
 import torch.nn as nn
 from sklearn.model_selection import train_test_split
@@ -19,7 +17,9 @@ import time
 import gc
 from tqdm import tqdm
 from os import path, walk
-import xml.etree.ElementTree as ET
+from Utilities.Extract_masks import create_filepaths
+from Utilities.Data_Retriever_Seg import DataRetriever
+from Utilities.Meter import Meter
 
 
 # In[2]:
@@ -145,8 +145,8 @@ class Trainer(object):
         '''Returns dataloader for the model training'''
         image_folder = '.\IMAGES'
         annot_folder = '.\ANNOTATIONS'
-        df = self.create_filepaths(annot_folder)
-        train_df, val_df = train_test_split(df, test_size=0.3, stratify=df["defects"], random_state=69)
+        df = create_filepaths(annot_folder)
+        train_df, val_df = train_test_split(df, test_size=0.3, stratify=df["Number_of_Defects"], random_state=69)
         df = train_df if phase == "train" else val_df
         image_dataset = DataRetriever(df, image_folder, annot_folder, mean, std, phase)
         dataloader = DataLoader(
@@ -159,26 +159,3 @@ class Trainer(object):
 
         return dataloader
     
-    def create_filepaths(self, path):
-        df = pd.DataFrame()
-        for (dirpath, dirnames,filenames) in walk(path):
-            for filename in filenames:
-                temp_path = "\\".join([path, filename])
-                tree = ET.parse(temp_path)
-                root = tree.getroot()
-                dict1 = dict()
-                ls = []
-                for description in root.iter('name'):
-                    ls.append(description.text)
-                res = np.array(ls)
-                res = np.unique(res)
-                ls = res.tolist()
-                dict1['Name'] = filename
-                for ele in ls:
-                    dict1[ele] = 1
-                df = df.append(dict1, ignore_index= True)
-        df = df.replace(np.nan, 0)
-        df['defects'] = df.drop('Name',axis=1).sum(axis=1) 
-        
-        return df   
-
