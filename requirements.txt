@@ -1,9 +1,9 @@
-pandas==1.2.4
-torchvision==0.9.1
-numpy==1.19.2
-albumentations==0.5.2
-tqdm==4.59.0
-torch==1.8.1
 opencv_python_headless==4.5.1.48
+albumentations==0.5.2
+pandas==1.2.4
+torch==1.8.1
+numpy==1.19.2
+torchvision==0.9.1
+tqdm==4.59.0
 Pillow==8.2.0
 scikit_learn==0.24.2
