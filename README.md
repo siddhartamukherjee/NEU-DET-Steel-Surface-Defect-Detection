@@ -48,8 +48,11 @@ Below is the description of the important files and folders in the project:-
   * **Data_Retriever_Inference_Real_Time.py** - This script returns the data loader for inferencing.
 * **Create_Validation_Images.ipynb** - This ipynb file creates two folders named Validation_Images and Validation_Annotations. The script randomly selected five images from each     class and moved those images and their annotation xmls to the folders Validation_Images and Validation_Annotations respectively. The model training won't be done on the images present in the Validation_Images. These images will be only used for final validation with our model.
 * **Exploratory_Data_Analysis.ipynb** - This ipynb file gives an analysis of the data.
-* **Train_Segmentation_Model.ipynb** - This ipynb file is used to train the model.
-* **Inference_Script_Real_Time.ipynb** - This ipynb file is used for inferencing. It takes single image as input. The images present in the Validation_Images folder can be used for inferencing.
+* **Train_Segmentation_Model_FPN+inceptionv4.ipynb** - This ipynb file is used to train an FPN with inceptionv4 encoder.
+* **Train_Segmentation_Model_FPN+Resnet.ipynb** - This ipynb file is used to train an FPN with resnet34 encoder.
+* **Train_Segmentation_Model_FPN+xception.ipynb** - This ipynb file is used to train an FPN with xception encoder.
+* **Train_Segmentation_Model_Unet+Resnet.ipynb** - This ipynb file is used to train an Unet with resnet34 encoder.
+* **Inference_Script.ipynb** - This ipynb file is used for inferencing. It reads the images from the Validation_Images folder as input and generates the masks as output. It also shows the comparison of the predicted mask with the original mask.
 
 ## Setup
 
@@ -58,4 +61,4 @@ This section gives an overview of how to use the project.
 * Install the requirements from the requirements.txt file using the command **pip install -r requirements.txt**.
 * First to get an overview about the data have a look at the ipynb file named Exploratory_Data_Analysis.ipynb.
 * The model training has been done by the script Train_Segmentation_Model.ipynb.
-* Once, the model has been trained the script named Inference_Script_Real_Time.ipynb can be used to get inference on an image.
+* Once, the model has been trained the script named Inference_Script.ipynb can be used to get inference on the validation images.
