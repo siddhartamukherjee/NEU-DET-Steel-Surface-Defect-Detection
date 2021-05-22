@@ -16,7 +16,7 @@ import torch.backends.cudnn as cudnn
 import time
 import gc
 from tqdm import tqdm
-from os import path, walk
+import os
 from Utilities.Extract_masks import create_filepaths
 from Utilities.Data_Retriever_Seg import DataRetriever
 from Utilities.Meter import Meter
@@ -27,7 +27,7 @@ from Utilities.Meter import Meter
 
 class Trainer(object):
     '''This class takes care of training and validation of our model'''
-    def __init__(self, model, lr, epochs):
+    def __init__(self, model, lr, epochs, path):
         self.num_workers = 6
         self.batch_size = {"train": 4, "val": 4}
         self.accumulation_steps = 32 // self.batch_size['train']
@@ -35,6 +35,7 @@ class Trainer(object):
         self.num_epochs = epochs
         self.epochs_passed = 0
         self.best_loss = float("inf")
+        self.best_dice = float(0)
         self.phases = ["train", "val"]
         CUDA_VISIBLE_DEVICES=0,1 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -42,15 +43,15 @@ class Trainer(object):
         self.net = model
         self.criterion = torch.nn.BCEWithLogitsLoss()
         self.optimizer = optim.Adam(self.net.parameters(), lr=self.lr)
-        self.scheduler = ReduceLROnPlateau(self.optimizer, mode="min", patience=3, verbose=True)
+        self.scheduler = ReduceLROnPlateau(self.optimizer, mode="max", patience=3, verbose=True)
         #self.scheduler = CosineAnnealingLR(self.optimizer, T_max=10)
         #intialize the model
         self.net= nn.DataParallel(self.net)
         #self.net = self.net.share_memory()
         self.net = self.net.to(self.device)
-        PATH = './Models/model.pth'
-        if path.exists(PATH):
-            checkpoint = torch.load(PATH)
+        self.PATH = path
+        if os.path.exists(self.PATH):
+            checkpoint = torch.load(self.PATH)
             self.net.load_state_dict(checkpoint['state_dict'])
             self.optimizer.load_state_dict(checkpoint['optimizer'])
             self.epochs_passed = checkpoint['epoch']
@@ -114,7 +115,7 @@ class Trainer(object):
         self.dice_scores[phase].append(dice)
         self.iou_scores[phase].append(iou)
         torch.cuda.empty_cache()
-        return epoch_loss
+        return epoch_loss, dice, iou
 
     def start(self):
         for epoch in range(self.epochs_passed,self.num_epochs):
@@ -123,16 +124,19 @@ class Trainer(object):
             state = {
                 "epoch": epoch,
                 "best_loss": self.best_loss,
+                "best_dice": self.best_dice,
                 "state_dict": self.net.state_dict(),
                 "optimizer": self.optimizer.state_dict(),
             }
             with torch.no_grad():
-                val_loss = self.iterate(epoch, "val")
-                self.scheduler.step(val_loss)
-            if val_loss < self.best_loss:
+                val_loss, val_dice, val_iou = self.iterate(epoch, "val")
+                self.scheduler.step(val_dice)
+            #if val_loss < self.best_loss:
+            if val_dice > self.best_dice:
                 print("******** New optimal found, saving state ********")
                 state["best_loss"] = self.best_loss = val_loss
-                torch.save(state, "./Models/model.pth")
+                state["best_dice"] = self.best_dice = val_dice
+                torch.save(state, self.PATH)
             print()
             
     def provider(self,
