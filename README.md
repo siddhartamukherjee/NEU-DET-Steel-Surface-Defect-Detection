@@ -80,8 +80,7 @@ This section gives an overview of the workflow.
 ![fig 1](https://github.com/siddhartamukherjee/NEU-SURFACE-DEFECT/blob/master/Workflow_Images/Data_Separation.jpg)
 
 * **Training Worflow** - Once, the data separation was done the training process was started. The pytorch framework with CUDA support was used for training. The below git repository made by qubvel was used for building segmentation models. 
-
-https://github.com/qubvel/segmentation_models.pytorch
+ https://github.com/qubvel/segmentation_models.pytorch
 
 This repository provides several architectures for image segmentaion. The library provides the necessary instructions on how to use the architectures. The architectures that were tried for this project are given below:-
 
@@ -100,4 +99,8 @@ Irrespective of the architecture used the training process is same. This include
 A visual representation of the above workflow is shown below:-
 
 ![fig 2](https://github.com/siddhartamukherjee/NEU-SURFACE-DEFECT/blob/master/Workflow_Images/Training_Workflow.jpg)
+
+* **Inferencing** - In this step one of the saved model is used to generate the masks for the unknown images in the Validation_Images folder. Also, comparison is done between the predicted masks and the actual masks from the corresponding xml files in the Validation_Annotation folder.
+
+A visual representation of the same is shown below:-
 
