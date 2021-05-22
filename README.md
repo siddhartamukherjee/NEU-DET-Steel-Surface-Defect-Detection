@@ -77,3 +77,5 @@ This section gives an overview of the workflow.
 
 
 
+![fig 1](https://github.com/siddhartamukherjee/NEU-SURFACE-DEFECT/blob/master/Workflow_Images/Data_Separation.jpg)
+
