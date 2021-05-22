@@ -76,4 +76,5 @@ This section gives an overview of the workflow.
 * **Separating files for validation** - As mentioned earlier before the experiment is started we need to separate some images and xmls for each defect class. These are the files that won't be used for training and cross validation. These files will be only used for inferencing. The Create_Validation_Images.ipynb file is used for this purpose. A visual representation of this is shown below:-
 
 
+![alt text](https://github.com/siddhartamukherjee/NEU-SURFACE-DEFECT/blob/master/Workflow_Images/Data_Separation.jpg)
 
