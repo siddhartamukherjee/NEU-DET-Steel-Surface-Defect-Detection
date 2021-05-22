@@ -79,3 +79,24 @@ This section gives an overview of the workflow.
 
 ![fig 1](https://github.com/siddhartamukherjee/NEU-SURFACE-DEFECT/blob/master/Workflow_Images/Data_Separation.jpg)
 
+* **Training Worflow** - Once, the data separation was done the training process was started. The pytorch framework with CUDA support was used for training. The below git repository made by qubvel was used for building segmentation models. 
+
+https://github.com/qubvel/segmentation_models.pytorch
+
+This repository provides several architectures for image segmentaion. The library provides the necessary instructions on how to use the architectures. The architectures that were tried for this project are given below:-
+
+** Unet with Resnet34 encoder
+** FPN with Resnet34 encoder
+** FPN with inceptionv4 encoder
+** FPN with xception encoder
+
+Irrespective of the architecture used the training process is same. This includes the below steps:-
+** Starting the model training by executing one of the Train_Segmentation_Model scripts. 
+** All those scripts calls the start function of the Trainer script to start the training.
+** This in turn calls the Data_Retriever script to generate the data loaders for both training and validation. The batch size used was 4.
+** At the end of each epoch evaluate if the validation dice score is better than the previous best score. If it is better then save the model state.
+
+A visual representation of the above workflow is shown below:-
+
+![fig 2](https://github.com/siddhartamukherjee/NEU-SURFACE-DEFECT/blob/master/Workflow_Images/Data_Separation.jpg)
+
