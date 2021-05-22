@@ -44,6 +44,7 @@ Below is the description of the important files and folders in the project:-
   * **Meter.py** - This python script contains the calculation logic for the metrics used for model evaluation i.e IOU, Dice Coefficient, Dice Positive and Dice Negative.
   * **Trainer.py** - This python script contains logic to train the model. 
   * **Data_Retriever_Seg.py** - The output of this python script are Train and Test Datasets.
+  * **Extract_masks.py** - This file has functions to extract masks from the annotation xmls.
   * **Resnet_Unet.py** - This python script contains the model class. The model returned by this script is a Unet model with Resnet encoder.
   * **Data_Retriever_Inference_Real_Time.py** - This script returns the data loader for inferencing.
 * **Create_Validation_Images.ipynb** - This ipynb file creates two folders named Validation_Images and Validation_Annotations. The script randomly selected five images from each     class and moved those images and their annotation xmls to the folders Validation_Images and Validation_Annotations respectively. The model training won't be done on the images present in the Validation_Images. These images will be only used for final validation with our model.
