@@ -104,3 +104,15 @@ A visual representation of the above workflow is shown below:-
 
 A visual representation of the same is shown below:-
 
+![image](https://user-images.githubusercontent.com/63548045/119221648-e8d25700-bb0d-11eb-90bd-901d0976295e.png)
+
+![image](https://user-images.githubusercontent.com/63548045/119221661-fe478100-bb0d-11eb-890e-ff0302fe0edf.png)
+
+![image](https://user-images.githubusercontent.com/63548045/119221692-161f0500-bb0e-11eb-8452-d1442527098a.png)
+
+![image](https://user-images.githubusercontent.com/63548045/119221714-33ec6a00-bb0e-11eb-8420-cd56b39d9f59.png)
+
+![image](https://user-images.githubusercontent.com/63548045/119221726-41a1ef80-bb0e-11eb-80f3-32fa773cc3d5.png)
+
+![image](https://user-images.githubusercontent.com/63548045/119221739-52eafc00-bb0e-11eb-9bf7-45b0e7832b60.png)
+
