@@ -3,6 +3,7 @@
 * [Technologies](#technologies)
 * [Files and Folders](#files-and-folders)
 * [Setup](#Setup)
+* [Workflow](#Workflow)
 
 
 
@@ -67,3 +68,12 @@ This section gives an overview of how to use the project.
 * First to get an overview about the data have a look at the ipynb file named Exploratory_Data_Analysis.ipynb.
 * The respective model trainings can be done by the script Train_Segmentation_Model** scripts.
 * Once, the model has been trained the script named Inference_Script.ipynb can be used to get inference on the validation images.
+
+## Workflow
+
+This section gives an overview of the workflow.
+
+* **Separating files for validation** - As mentioned earlier before the experiment is started we need to separate some images and xmls for each defect class. These are the files that won't be used for training and cross validation. These files will be only used for inferencing. The Create_Validation_Images.ipynb file is used for this purpose. A visual representation of this is shown below:-
+
+
+
