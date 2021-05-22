@@ -9,7 +9,7 @@
 # General info
 The objective of the project is to build a pytorch segmentation model which can identify defect location on steel surface. The segmentation model used here is Unet with Resnet encoder. For this we have used the open surface defect database from Northeaster University(NEU).
 
-In this database, six kinds of typical surface defects of the hot-rolled steel strip are collected, i.e., rolled-in scale (RS), patches (Pa), crazing (Cr), pitted surface (PS), inclusion (In) and scratches (Sc). The images provided in the database are in grayscale and of uniform dimensions 200x200.
+In this database, six kinds of typical surface defects of the hot-rolled steel strip are collected, i.e., rolled-in scale (RS), patches (Pa), crazing (Cr), pitted surface (PS), inclusion (In) and scratches (Sc). The images provided in the database are in grayscale and of uniform dimensions 200x200. A snapshot of how the images looks like are shown below:-
 
 
 ![alt text](http://faculty.neu.edu.cn/yunhyan/Webpage%20for%20article/NEU%20surface%20defect%20database/Fig.2.png)
