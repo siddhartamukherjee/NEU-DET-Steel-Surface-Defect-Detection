@@ -100,7 +100,7 @@ A visual representation of the above workflow is shown below:-
 
 ![fig 2](https://github.com/siddhartamukherjee/NEU-SURFACE-DEFECT/blob/master/Workflow_Images/Training_Workflow.jpg)
 
-* **Inferencing** - In this step one of the saved model is used to generate the masks for the unknown images in the Validation_Images folder. Also, comparison is done between the predicted masks and the actual masks from the corresponding xml files in the Validation_Annotation folder.
+* **Inferencing** - For this the Inference_Script was used. In this step one of the saved model is used to generate the masks for the unknown images in the Validation_Images folder. Also, comparison is done between the predicted masks and the actual masks from the corresponding xml files in the Validation_Annotation folder.
 
 A visual representation of the same is shown below:-
 
