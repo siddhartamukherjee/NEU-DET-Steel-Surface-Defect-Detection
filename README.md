@@ -27,8 +27,8 @@ The details of the key files and folders are given below.
 
 The technologies used in this project are given below:-
 
-* Python(v3.7.3)
-* Pytorch(v1.1.0)
+* Python(v3.7.10)
+* Pytorch(v1.8.1)
 
 
 ## Files and Folders
@@ -60,5 +60,5 @@ This section gives an overview of how to use the project.
 
 * Install the requirements from the requirements.txt file using the command **pip install -r requirements.txt**.
 * First to get an overview about the data have a look at the ipynb file named Exploratory_Data_Analysis.ipynb.
-* The model training has been done by the script Train_Segmentation_Model.ipynb.
+* The respective model trainings can be done by the script Train_Segmentation_Model** scripts.
 * Once, the model has been trained the script named Inference_Script.ipynb can be used to get inference on the validation images.
